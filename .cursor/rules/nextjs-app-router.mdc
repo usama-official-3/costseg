@@ -1,0 +1,14 @@
+---
+description: Next.js App Router and TypeScript conventions for CostSeg SI
+globs: app/**/*.{ts,tsx},lib/**/*.{ts,tsx},components/**/*.{ts,tsx}
+alwaysApply: false
+---
+
+# Next.js App Router
+
+- This project uses **Next.js 16** App Router. Prefer docs under `node_modules/next/dist/docs/` when unsure.
+- Default to **React Server Components**. Add `"use client"` only for interactivity (nav state, forms, explorers).
+- Use `next/font` (Inter already in `app/layout.tsx`) and `next/image` for brand assets.
+- Colocate `loading.tsx`, `error.tsx`, and `not-found.tsx` where useful — no artificial loader delays.
+- Keep TypeScript **strict**. Prefer typed config in `config/` and schemas in `lib/`.
+- Do not add database, CMS, auth, or paid APIs without documenting need and obtaining approval.

@@ -1,0 +1,13 @@
+---
+description: Testing, QA, and approval-gate discipline
+alwaysApply: true
+---
+
+# Phase Gates & QA
+
+- Work **one phase at a time**. Never start the next phase without explicit user approval (`Approve`).
+- After each phase: concise report + ask exactly whether to proceed to the next phase.
+- If user says `Changes`, fix within the current phase and re-request approval.
+- Prefer Vitest/RTL for units and Playwright for responsive/interaction when tests are in scope.
+- No production deployment without separate explicit production-deployment approval.
+- Frontend-first: mock form success until lead destination is approved.

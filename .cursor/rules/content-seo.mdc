@@ -1,0 +1,14 @@
+---
+description: Content models, SEO, and research integrity
+globs: content/**/*.{md,mdx,ts,tsx},app/**/*.{ts,tsx},lib/**/*.{ts,tsx}
+alwaysApply: false
+---
+
+# Content, SEO & Research Integrity
+
+- Follow `docs/CONTENT_AND_RESEARCH_STANDARDS.md` and `docs/SITEMAP.md`.
+- Distinguish authority vs commentary vs illustrative examples. Label sample data.
+- Court cases are a research shortlist until verified — do not publish as verified holdings.
+- Educational content is not individualized tax advice.
+- Unique titles/descriptions via `generateMetadata`; plan for sitemap/robots at launch readiness.
+- Keep form UI separate from future submission adapters (`submitLead` abstraction).

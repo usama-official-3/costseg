@@ -1,0 +1,14 @@
+---
+description: Tailwind tokens, responsive shell, and UI patterns
+globs: app/**/*.{ts,tsx,css},components/**/*.{ts,tsx}
+alwaysApply: false
+---
+
+# Tailwind & UI
+
+- Use project tokens: `bg-ink`, `bg-paper`, `bg-soft`, `text-muted`, `border-line`, `bg-lime`, `text-lime`, etc.
+- Breakpoints: sm 480, md 768, lg 1024, xl 1280, 2xl 1440, 3xl 1920. Design from 320px up.
+- Mobile bottom nav visible below `lg`; desktop uses top header. Respect safe-area; never cover forms/CTAs.
+- Card radius ~13px, buttons ~8px. Prefer borders over heavy shadows.
+- No generic purple AI templates, excessive glows, or decorative gradient spam.
+- Respect `prefers-reduced-motion` for loaders/animations.

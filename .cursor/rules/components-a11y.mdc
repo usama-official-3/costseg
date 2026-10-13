@@ -1,0 +1,13 @@
+---
+description: Reusable components and accessibility requirements
+globs: components/**/*.{ts,tsx}
+alwaysApply: false
+---
+
+# Components & Accessibility
+
+- Follow `docs/COMPONENT_INVENTORY.md` naming and folders (`brand`, `layout`, `ui`, `marketing`, `knowledge`, `tools`, `loaders`).
+- Every interactive control needs keyboard access and visible `:focus-visible` styles.
+- Icon-only controls require accessible names. Bottom nav items include text labels.
+- Forms: associate labels, show errors, success/empty/error states.
+- Do not build ~187 one-off pages — use reusable templates + typed content.

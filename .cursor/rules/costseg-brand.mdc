@@ -1,0 +1,16 @@
+---
+description: CostSeg SI brand, messaging, and source-of-truth constraints
+alwaysApply: true
+---
+
+# CostSeg SI — Brand & Sources
+
+- Brand name: **CostSeg SI**. Domain: **costseg.si**.
+- Prefer **“Super Intelligence”** over “Artificial Intelligence” in prominent marketing copy when accurate.
+- Official logos only from `public/brand/`. Never redraw, stretch, recolor, or distort.
+- Design tokens: ink `#17191B`, paper `#FFFFFF`, soft `#F5F6F6`, muted `#656B70`, line `#E4E6E8`, lime `#D6FF43`. See `docs/DESIGN_SYSTEM.md`.
+- Do not invent credentials, testimonials, statistics, tax conclusions, contact details, pricing, or guarantees.
+- Do not claim unverified AI agents are operational; label explanatory SI UI as proposed/explanatory unless approved otherwise.
+- Primary sources: `briefs/`, `docs/`, Master Project Plan. Design-board images in `references/` are inspiration only.
+- Follow phase gates: implement only the approved phase; stop and ask before the next phase.
+- No production deploy without separate explicit approval.
