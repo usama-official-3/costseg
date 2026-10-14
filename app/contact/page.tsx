@@ -1,14 +1,15 @@
-import type { Metadata } from "next";
+import { buildPageMetadata } from "@/lib/seo/pageMetadata";
 import { Hero } from "@/components/marketing/Hero";
 import { ContactForm } from "@/components/marketing/ContactForm";
 import { Container } from "@/components/layout/Container";
 import { Section } from "@/components/layout/Section";
 
-export const metadata: Metadata = {
+export const metadata = buildPageMetadata({
   title: "Contact",
   description:
     "Contact CostSeg SI to discuss a potential cost segregation study for your property.",
-};
+  path: "/contact",
+});
 
 export default function ContactPage() {
   return (
@@ -19,7 +20,7 @@ export default function ContactPage() {
         support="Share your contact details and a short note about your property. We’ll follow up on next steps."
         primaryHref="#lead-form"
         primaryLabel="Jump to form"
-        secondaryHref="/request-study"
+        secondaryHref="/request-a-study"
         secondaryLabel="Request a study"
       />
       <Section surface="paper" className="py-14" id="lead-form">

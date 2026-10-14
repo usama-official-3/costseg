@@ -42,7 +42,7 @@ export function KnowledgeSearchPanel({
 
   return (
     <div className="space-y-6">
-      <div className="grid gap-4 rounded-[13px] border border-line bg-paper p-4 sm:grid-cols-3">
+      <div className="grid gap-4 rounded-[13px] border border-line bg-paper p-4 shadow-[0_1px_0_rgba(23,25,27,0.04)] sm:grid-cols-3 sm:p-5">
         <div className="sm:col-span-3 lg:col-span-1">
           <Label htmlFor="knowledge-query">Search</Label>
           <TextInput
@@ -87,11 +87,10 @@ export function KnowledgeSearchPanel({
       </div>
 
       <p className="text-sm text-muted">
-        Showing {results.length} of {articles.length} sample articles (Phase 6
-        seed set — not the full 187-page inventory).
+        Showing {results.length} of {articles.length} educational articles.
       </p>
 
-      <ResultList articles={results} />
+      <ResultList articles={results} columns="auto" />
     </div>
   );
 }

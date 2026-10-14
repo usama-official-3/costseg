@@ -35,7 +35,7 @@ export function Logo({
       height={stacked ? 120 : 40}
       priority={priority}
       className={cn(
-        stacked ? "h-auto w-[120px]" : "h-8 w-auto sm:h-9",
+        stacked ? "h-auto w-[120px]" : "h-8 w-auto max-w-full sm:h-9",
         // Official on-dark PNGs ship with an opaque near-black plate; lighten
         // blends that plate into ink headers without editing the asset.
         onDark && "mix-blend-lighten",

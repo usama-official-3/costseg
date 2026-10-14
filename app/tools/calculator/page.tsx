@@ -1,13 +1,15 @@
-import type { Metadata } from "next";
 import { ToolLayout } from "@/components/tools/ToolLayout";
 import { LinkButton } from "@/components/ui/LinkButton";
+import { buildPageMetadata } from "@/lib/seo/pageMetadata";
 
-export const metadata: Metadata = {
+export const metadata = buildPageMetadata({
   title: "Illustrative Depreciation Calculator",
   description:
     "Gated placeholder for an illustrative depreciation calculator pending tax methodology review.",
-  robots: { index: false, follow: false },
-};
+  path: "/tools/calculator",
+  index: false,
+  follow: false,
+});
 
 export default function CalculatorPage() {
   return (

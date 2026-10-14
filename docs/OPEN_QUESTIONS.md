@@ -5,9 +5,9 @@ Questions requiring client, boss, or project-owner decisions before final conten
 | ID | Question | Source | Blocking | Status |
 |---|---|---|---|---|
 | OQ-01 | Approve focused DOCX sitemap only, full ~187-page HTML hub, or phased hybrid (recommended)? | DOCX vs HTML | Yes for hub scale | Open |
-| OQ-02 | Who supplies research content for Groups B–H — client or development team drafts for review? | HTML §10 | Yes for content fill | Open |
+| OQ-02 | Who supplies research content for Groups B–H — client or development team drafts for review? | HTML §10 | Soft after index override | Open |
 | OQ-03 | Interactive tools in v1: knowledge search, questionnaire, SI workflow explorer, calculator? | HTML features | Partial | Open |
-| OQ-04 | Who is the qualified tax/legal reviewer for research pages and any calculator? | HTML §10 | Yes for publish | Open |
+| OQ-04 | Who is the qualified tax/legal reviewer for research pages and any calculator? | HTML §10 | Soft for index; still for counsel claims | Open |
 | OQ-05 | Exact services and property/audience types that may be named publicly? | DOCX §8 | Yes for Services/Who We Help | Open |
 | OQ-06 | Approved process steps, turnaround language, and deliverables? | DOCX §8 | Yes for How It Works | Open |
 | OQ-07 | Approved proof points (credentials, testimonials, case studies, stats, logos)? | DOCX §8 | Yes for trust section | Open |
@@ -19,10 +19,18 @@ Questions requiring client, boss, or project-owner decisions before final conten
 | OQ-13 | VPS access method and DNS/SSL configuration timing? | DOCX §8 | **Yes — blocks production deploy** | Open — see `PRODUCTION_DEPLOY_REPORT.md` |
 | OQ-14 | Confirm mobile bottom-nav destinations (propose: Home, Research, Tools, Contact)? | Owner UX brief | Soft | Open |
 | OQ-15 | Approve hero supporting copy and SI multi-agent marketing wording (planned vs operational)? | HTML + client SI desc | Yes for Technology pages | Open |
+| OQ-16 | Adopt proposed 187 URLs as canonical + 301s from current paths? | Audit Default A | Was blocking URL work | **Confirmed 2026-10-14** |
+| OQ-17 | Index/sitemap only approved, sourced, review-ready content? | Audit Default B | **Overridden 2026-10-14** — client approved indexing all Knowledge Hub pages for production |
 
-## Recommended interim answers (proposed — not approved)
+## Recommended interim answers
 
-- **OQ-01:** Hybrid (Group A + hub templates + samples)
-- **OQ-03:** Search UI + questionnaire + workflow explorer in frontend; calculator deferred
+- **OQ-01:** Full hub inventory live as educational pages; indexing approved for production
+- **OQ-03:** Search UI + questionnaire + workflow explorer in frontend; calculator deferred / noindex
 - **OQ-14:** Home / Research / Tools / Contact
+- **OQ-16 / Default A:** Confirmed — proposed URLs canonical + redirects
+- **OQ-17 / Default B:** **Client override** — index all Knowledge Hub articles; calculator stays noindex; staging may still use `COSTSEG_NOINDEX=1`
 - Forms: mock success until OQ-08 resolved
+
+**Canonical phases:** `docs/PHASE_TRACKER.md`.
+
+Phases 0–8 complete. **Phase 9 / production deploy stays separate** and is blocked on OQ-13.

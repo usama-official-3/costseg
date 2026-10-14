@@ -1,13 +1,14 @@
-import type { Metadata } from "next";
+import { buildPageMetadata } from "@/lib/seo/pageMetadata";
 import { ToolLayout } from "@/components/tools/ToolLayout";
 import { WorkflowExplorer } from "@/components/tools/WorkflowExplorer";
 import { LinkButton } from "@/components/ui/LinkButton";
 
-export const metadata: Metadata = {
-  title: "Super Intelligence Workflow Explorer",
+export const metadata = buildPageMetadata({
+  title: "SI workflow explorer",
   description:
-    "Interactive explanation of CostSeg SI’s proposed Super Intelligence multi-agent workflow for cost segregation studies.",
-};
+    "Interactive Super Intelligence workflow explorer — explanatory demo for CostSeg SI.",
+  path: "/tools/workflow-explorer",
+});
 
 export default function WorkflowExplorerPage() {
   return (

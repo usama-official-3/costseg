@@ -1,6 +1,11 @@
 import type { Metadata, Viewport } from "next";
 import { Inter } from "next/font/google";
 import { SiteShell } from "@/components/layout/SiteShell";
+import { JsonLd } from "@/components/seo/JsonLd";
+import {
+  organizationJsonLd,
+  websiteJsonLd,
+} from "@/lib/seo/structuredData";
 import "./globals.css";
 
 const inter = Inter({
@@ -26,9 +31,6 @@ export const metadata: Metadata = {
     "real estate tax",
   ],
   authors: [{ name: "CostSeg SI" }],
-  alternates: {
-    canonical: "/",
-  },
   openGraph: {
     type: "website",
     locale: "en_US",
@@ -77,6 +79,8 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       className={`${inter.variable} h-full antialiased`}
     >
       <body className="flex min-h-full flex-col overflow-x-clip bg-paper font-sans text-ink">
+        <JsonLd data={organizationJsonLd()} />
+        <JsonLd data={websiteJsonLd()} />
         <SiteShell>{children}</SiteShell>
       </body>
     </html>

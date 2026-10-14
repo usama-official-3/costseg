@@ -1,14 +1,15 @@
-import type { Metadata } from "next";
+import { buildPageMetadata } from "@/lib/seo/pageMetadata";
 import { CtaBand } from "@/components/marketing/CtaBand";
 import { FaqPreview } from "@/components/marketing/FaqPreview";
 import { Hero } from "@/components/marketing/Hero";
 import { homeCopy } from "@/content/marketing/home";
 
-export const metadata: Metadata = {
+export const metadata = buildPageMetadata({
   title: "FAQs",
   description:
-    "Frequently asked questions about CostSeg SI process, documentation, and how Super Intelligence is presented.",
-};
+    "Frequently asked questions about CostSeg SI cost segregation study topics and educational resources.",
+  path: "/faqs",
+});
 
 const moreFaqs = [
   ...homeCopy.faqs,
@@ -36,7 +37,7 @@ export default function FaqsPage() {
         showViewAll={false}
         heading="Answers"
       />
-      <CtaBand />
+      <CtaBand tone="ink" />
     </main>
   );
 }

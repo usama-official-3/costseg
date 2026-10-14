@@ -12,6 +12,7 @@ export function SiteShell({ children }: SiteShellProps) {
     <>
       <SkipToContent />
       <SiteHeader />
+      {/* No bottom padding here — white gap was caused by paper bg + pb under dark footer */}
       <div className="flex min-h-0 flex-1 flex-col">
         {children}
         <SiteFooter />

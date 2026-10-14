@@ -17,6 +17,8 @@ This folder is the Phase 1 planning package. It does **not** authorize coding, s
 | [QA_PLAN.md](./QA_PLAN.md) | Test strategy |
 | [OPEN_QUESTIONS.md](./OPEN_QUESTIONS.md) | Decisions needed |
 | [CONTENT_AND_RESEARCH_STANDARDS.md](./CONTENT_AND_RESEARCH_STANDARDS.md) | Tax/research integrity |
+| [AUDIT_AND_ROADMAP.md](./AUDIT_AND_ROADMAP.md) | Evidence-based audit + approval-gated phases |
+| [URL_RECONCILIATION.md](./URL_RECONCILIATION.md) | Current vs proposed 187 URLs + redirects |
 | [VISUAL_DIRECTION.md](./VISUAL_DIRECTION.md) | Phase 2 visual direction |
 | [WIREFRAMES.md](./WIREFRAMES.md) | Phase 2 text wireframes |
 | [COMPONENT_INVENTORY.md](./COMPONENT_INVENTORY.md) | Phase 2 component inventory |

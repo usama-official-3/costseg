@@ -1,36 +1,64 @@
-import { getAllArticles, getArticlePath } from "@/lib/content/knowledge";
+import { pageInventory } from "@/content/inventory/pageRegistry";
+import {
+  getAllArticles,
+  getArticlePath,
+  isArticleIndexable,
+  listGroups,
+} from "@/lib/content/knowledge";
 
-/** Public marketing + tools + knowledge index routes for sitemap. */
+/**
+ * Extra public routes beyond the client 187-URL catalog
+ * (legal split pages + tools kept on the live site; calculator omitted).
+ */
+export const SITEMAP_EXTRA_PATHS = [
+  "/legal/privacy",
+  "/legal/terms",
+  "/learn",
+  "/tax-law",
+  "/resources",
+  "/tools",
+  "/tools/questionnaire",
+  "/tools/workflow-explorer",
+] as const;
+
+/** Deduped public paths for sitemap: full 187 catalog + site extras. */
 export function getStaticPublicPaths(): string[] {
-  return [
-    "/",
-    "/how-it-works",
-    "/services",
-    "/technology",
-    "/workflow",
-    "/who-we-help",
-    "/property-types",
-    "/about",
-    "/faqs",
-    "/contact",
-    "/request-study",
-    "/privacy",
-    "/terms",
-    "/knowledge",
-    "/knowledge/fundamentals",
-    "/knowledge/tax-law",
-    "/knowledge/cases",
-    "/knowledge/properties",
-    "/knowledge/assets",
-    "/knowledge/studies",
-    "/knowledge/resources",
-    "/tools",
-    "/tools/questionnaire",
-    "/tools/workflow-explorer",
-    // calculator intentionally omitted (gated / noindex)
-  ];
+  const catalog = pageInventory.map((entry) => entry.path);
+  const groupIndexes = listGroups().map((g) => g.href);
+  const merged = new Set<string>([
+    ...catalog,
+    ...groupIndexes,
+    ...SITEMAP_EXTRA_PATHS,
+  ]);
+  // Calculator must never enter the sitemap.
+  merged.delete("/tools/calculator");
+  return [...merged].sort((a, b) => {
+    if (a === "/") return -1;
+    if (b === "/") return 1;
+    return a.localeCompare(b);
+  });
 }
 
+/**
+ * Knowledge article paths for sitemap.
+ * Client override 2026-10-14: all hub articles are indexable.
+ */
 export function getKnowledgeArticlePaths(): string[] {
-  return getAllArticles().map((article) => getArticlePath(article));
+  return getAllArticles()
+    .filter(isArticleIndexable)
+    .map((article) => getArticlePath(article));
+}
+
+/** Unique URL list actually emitted by `app/sitemap.ts`. */
+export function getSitemapPaths(): string[] {
+  const paths = new Set<string>([
+    ...getStaticPublicPaths(),
+    ...getKnowledgeArticlePaths(),
+  ]);
+  paths.delete("/tools/calculator");
+  return [...paths].sort((a, b) => {
+    if (a === "/") return -1;
+    if (b === "/") return 1;
+    return a.localeCompare(b);
+  });
 }

@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import { buildPageMetadata } from "@/lib/seo/pageMetadata";
 import { CtaBand } from "@/components/marketing/CtaBand";
 import { Hero } from "@/components/marketing/Hero";
 import { ProcessSteps } from "@/components/marketing/ProcessSteps";
@@ -7,11 +7,12 @@ import { Section } from "@/components/layout/Section";
 import { LinkButton } from "@/components/ui/LinkButton";
 import { homeCopy } from "@/content/marketing/home";
 
-export const metadata: Metadata = {
+export const metadata = buildPageMetadata({
   title: "Super Intelligence Technology",
   description:
-    "How CostSeg SI presents its Super Intelligence–led workflow for cost segregation study preparation.",
-};
+    "How CostSeg SI uses Super Intelligence workflows to support cost segregation study preparation.",
+  path: "/technology",
+});
 
 export default function TechnologyPage() {
   return (
@@ -20,15 +21,18 @@ export default function TechnologyPage() {
         eyebrow="Technology · Super Intelligence"
         title="Super Intelligence for cost segregation preparation"
         support="A multi-stage workflow designed to help extract, classify, estimate, and review property cost data — with professional sign-off remaining essential."
-        secondaryHref="/workflow"
+        secondaryHref="/technology/ai-agent-workflow"
         secondaryLabel="Agent workflow"
       />
 
       <ProcessSteps
-        title="How Super Intelligence is presented"
+        eyebrow="How it works"
+        title="The 4-Stage SI Process"
         lead="Based on the client’s multi-agent description. This page explains the proposed pipeline; it does not claim every agent capability is live in production unless confirmed."
         steps={homeCopy.siSteps}
-        surface="paper"
+        surface="soft"
+        numbered={false}
+        align="center"
       />
 
       <Section surface="soft" className="py-14">
@@ -43,7 +47,7 @@ export default function TechnologyPage() {
             replacing professional review.
           </p>
           <div className="flex flex-wrap gap-3 pt-2">
-            <LinkButton href="/workflow">See agent workflow</LinkButton>
+            <LinkButton href="/technology/ai-agent-workflow">See agent workflow</LinkButton>
             <LinkButton href="/tools" variant="secondaryLight">
               Tools preview
             </LinkButton>
@@ -51,7 +55,7 @@ export default function TechnologyPage() {
         </Container>
       </Section>
 
-      <CtaBand title="Talk through a technology-led study" />
+      <CtaBand title="Talk through a technology-led study" tone="ink" />
     </main>
   );
 }

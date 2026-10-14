@@ -1,0 +1,800 @@
+{
+  "generatedAt": "2026-10-14T13:33:57.678Z",
+  "baseUrl": "http://127.0.0.1:3000",
+  "catalog": {
+    "client187": 187,
+    "registry": 187,
+    "missingInRegistry": [],
+    "extraInRegistry": [],
+    "match": true
+  },
+  "indexing": {
+    "isArticleIndexableAlwaysTrue": true,
+    "factoryDefaultReviewed": true,
+    "expectedSitemapCount": 195,
+    "extras": [
+      "/legal/privacy",
+      "/legal/terms",
+      "/learn",
+      "/tax-law",
+      "/resources",
+      "/tools",
+      "/tools/questionnaire",
+      "/tools/workflow-explorer"
+    ],
+    "calculatorExcluded": true,
+    "codeSitemapPaths": [
+      "/",
+      "/about",
+      "/asset-library",
+      "/asset-library/appliances-and-equipment",
+      "/asset-library/asset-classification-evidence-and-documentation",
+      "/asset-library/cabinetry-and-built-in-casework",
+      "/asset-library/carpeting-and-specialty-flooring",
+      "/asset-library/decorative-and-specialty-lighting",
+      "/asset-library/dedicated-equipment-wiring",
+      "/asset-library/fencing-gates-and-site-features",
+      "/asset-library/fire-protection-and-safety-systems",
+      "/asset-library/flooring-and-floor-coverings",
+      "/asset-library/general-building-lighting",
+      "/asset-library/general-electrical-distribution",
+      "/asset-library/hvac-and-climate-control-systems",
+      "/asset-library/interior-partitions-and-decorative-features",
+      "/asset-library/landscaping-and-irrigation",
+      "/asset-library/medical-and-specialty-equipment",
+      "/asset-library/parking-lots-sidewalks-and-paving",
+      "/asset-library/plumbing-fixtures-and-specialty-plumbing",
+      "/asset-library/restaurant-kitchen-equipment",
+      "/asset-library/roofing-and-structural-components",
+      "/asset-library/security-and-access-control-systems",
+      "/asset-library/specialized-electrical-systems",
+      "/asset-library/specialized-millwork",
+      "/asset-library/specialized-ventilation-systems",
+      "/asset-library/telecommunications-and-data-wiring",
+      "/case-studies",
+      "/case-studies/asset-classification-review",
+      "/case-studies/blueprint-analysis",
+      "/case-studies/bonus-depreciation-comparison",
+      "/case-studies/bundled-contractor-costs",
+      "/case-studies/cost-estimation-and-reconciliation",
+      "/case-studies/hotel-property",
+      "/case-studies/how-to-interpret-a-final-asset-schedule",
+      "/case-studies/look-back-study",
+      "/case-studies/macrs-recovery-period-comparison",
+      "/case-studies/manufacturing-facility",
+      "/case-studies/medical-facility",
+      "/case-studies/multifamily-acquisition",
+      "/case-studies/new-construction-project",
+      "/case-studies/office-building",
+      "/case-studies/property-with-limited-records",
+      "/case-studies/quality-assurance-review",
+      "/case-studies/renovation-project",
+      "/case-studies/restaurant-property",
+      "/case-studies/retail-property",
+      "/case-studies/self-storage-property",
+      "/case-studies/single-family-rental-acquisition",
+      "/case-studies/site-improvements",
+      "/case-studies/specialized-equipment",
+      "/case-studies/warehouse",
+      "/contact",
+      "/court-cases",
+      "/court-cases/alamo-broadcasting-co-v-commissioner",
+      "/court-cases/building-systems-decisions",
+      "/court-cases/clemens-v-commissioner",
+      "/court-cases/commissioner-v-idaho-power-co",
+      "/court-cases/commissioner-v-lincoln-savings-and-loan-association",
+      "/court-cases/cost-estimation-evidence-decisions",
+      "/court-cases/decorative-features-decisions",
+      "/court-cases/depreciation-basis-decisions",
+      "/court-cases/electrical-installation-decisions",
+      "/court-cases/estate-of-walling-v-commissioner",
+      "/court-cases/functional-interdependence-decisions",
+      "/court-cases/hospital-corporation-of-america-v-commissioner",
+      "/court-cases/l-a-darling-co-v-commissioner",
+      "/court-cases/land-improvement-decisions",
+      "/court-cases/massey-motors-inc-v-united-states",
+      "/court-cases/metro-national-corporation-v-commissioner",
+      "/court-cases/permanent-attachments-decisions",
+      "/court-cases/personal-property-decisions",
+      "/court-cases/plainfield-union-water-co-v-commissioner",
+      "/court-cases/plumbing-and-hvac-decisions",
+      "/court-cases/recent-decisions-reviewed-index",
+      "/court-cases/repairs-and-capitalization-decisions",
+      "/court-cases/scott-paper-co-v-commissioner",
+      "/court-cases/simon-v-commissioner",
+      "/court-cases/specialized-equipment-decisions",
+      "/court-cases/sperry-and-hutchinson-co-v-commissioner",
+      "/court-cases/structural-components-decisions",
+      "/court-cases/whiteco-industries-inc-v-commissioner",
+      "/court-cases/yellow-cab-co-v-commissioner",
+      "/faqs",
+      "/how-cost-segregation-works",
+      "/knowledge-hub",
+      "/learn",
+      "/learn/15-year-property-explained",
+      "/learn/27-5-year-residential-rental-property",
+      "/learn/39-year-nonresidential-real-property",
+      "/learn/5-year-property-explained",
+      "/learn/7-year-property-explained",
+      "/learn/acquisition-studies",
+      "/learn/cost-segregation-terminology-glossary",
+      "/learn/cost-segregation-vs-standard-depreciation",
+      "/learn/depreciable-basis-explained",
+      "/learn/engineering-based-cost-estimation",
+      "/learn/form-3115-and-accounting-method-changes",
+      "/learn/how-a-cost-segregation-study-works",
+      "/learn/land-building-and-site-improvements",
+      "/learn/look-back-studies",
+      "/learn/macrs-explained",
+      "/learn/new-construction-studies",
+      "/learn/personal-property-vs-real-property",
+      "/learn/placed-in-service-date-explained",
+      "/learn/purchase-price-allocation",
+      "/learn/renovation-and-improvement-studies",
+      "/learn/site-inspections-and-documentation",
+      "/learn/study-reports-explained",
+      "/learn/what-is-cost-segregation",
+      "/learn/why-depreciation-matters",
+      "/learn/working-with-your-cpa",
+      "/legal",
+      "/legal/privacy",
+      "/legal/terms",
+      "/property-types",
+      "/property-types/assisted-living-facilities",
+      "/property-types/auto-repair-facilities",
+      "/property-types/automotive-dealerships",
+      "/property-types/build-to-rent-communities",
+      "/property-types/condominiums-and-townhomes",
+      "/property-types/data-centers",
+      "/property-types/distribution-centers",
+      "/property-types/gas-stations-and-convenience-stores",
+      "/property-types/hotels-and-resorts",
+      "/property-types/manufacturing-facilities",
+      "/property-types/medical-and-healthcare-facilities",
+      "/property-types/mixed-use-buildings",
+      "/property-types/motels-and-extended-stay-properties",
+      "/property-types/multifamily-apartment-buildings",
+      "/property-types/office-buildings",
+      "/property-types/parking-structures-and-garages",
+      "/property-types/restaurants-and-fast-food-properties",
+      "/property-types/retail-stores",
+      "/property-types/self-storage-facilities",
+      "/property-types/senior-living-facilities",
+      "/property-types/shopping-centers",
+      "/property-types/single-family-rental-properties",
+      "/property-types/specialty-and-recreational-properties",
+      "/property-types/student-housing",
+      "/property-types/warehouses",
+      "/request-a-study",
+      "/resources",
+      "/resources/asset-classification-index",
+      "/resources/bonus-depreciation-reference-guide",
+      "/resources/content-review-and-update-policy",
+      "/resources/cost-segregation-glossary",
+      "/resources/court-case-index",
+      "/resources/engineering-and-construction-glossary",
+      "/resources/irs-publications-and-forms-index",
+      "/resources/macrs-and-depreciation-glossary",
+      "/resources/property-type-guide-index",
+      "/resources/research-library-disclaimer",
+      "/resources/research-methodology",
+      "/resources/source-and-citation-standards",
+      "/resources/tax-code-and-regulation-index",
+      "/resources/tax-law-update-archive",
+      "/services",
+      "/tax-law",
+      "/tax-law/bonus-depreciation-acquisition-date-rules",
+      "/tax-law/bonus-depreciation-eligibility",
+      "/tax-law/building-acquisition-and-basis-allocation",
+      "/tax-law/capital-improvements-vs-repairs",
+      "/tax-law/federal-vs-state-depreciation-differences",
+      "/tax-law/half-year-convention",
+      "/tax-law/irs-cost-segregation-audit-techniques-guide",
+      "/tax-law/irs-form-3115-instructions",
+      "/tax-law/irs-form-4562",
+      "/tax-law/irs-publication-946",
+      "/tax-law/irs-tangible-property-regulations",
+      "/tax-law/leasehold-improvement-considerations",
+      "/tax-law/macrs-recovery-periods-and-classification",
+      "/tax-law/mid-month-convention",
+      "/tax-law/mid-quarter-convention",
+      "/tax-law/partial-asset-dispositions",
+      "/tax-law/placed-in-service-rules",
+      "/tax-law/property-used-in-a-trade-or-business",
+      "/tax-law/qualified-improvement-property",
+      "/tax-law/related-party-acquisition-considerations",
+      "/tax-law/rental-property-depreciation-rules",
+      "/tax-law/section-1245-property-overview",
+      "/tax-law/section-1250-property-overview",
+      "/tax-law/section-167-depreciation",
+      "/tax-law/section-168-k-bonus-depreciation",
+      "/tax-law/section-168-macrs",
+      "/tax-law/section-179-expensing-rules-and-boundaries",
+      "/tax-law/section-481-a-accounting-method-adjustments",
+      "/tax-law/tax-law-updates-and-effective-dates",
+      "/tax-law/treasury-regulations-for-depreciable-property",
+      "/technology",
+      "/technology/ai-agent-workflow",
+      "/tools",
+      "/tools/questionnaire",
+      "/tools/workflow-explorer",
+      "/who-we-help"
+    ]
+  },
+  "http": {
+    "probed": true,
+    "serverUp": true,
+    "sitemapLocCount": 195,
+    "client187Http": {
+      "total": 187,
+      "ok200": 103,
+      "fail": 84
+    },
+    "extrasHttp": {
+      "total": 8,
+      "ok200": 4,
+      "fail": 4
+    },
+    "robotsTxt": {
+      "status": 200,
+      "body": "User-Agent: *\nAllow: /\nDisallow: /tools/calculator\n\nHost: https://costseg.si\nSitemap: https://costseg.si/sitemap.xml\n"
+    },
+    "calculatorStatus": {
+      "path": "/tools/calculator",
+      "status": 0,
+      "robots": null,
+      "ok": false,
+      "error": "This operation was aborted"
+    },
+    "failures": [
+      {
+        "path": "/how-cost-segregation-works",
+        "status": 0,
+        "error": "This operation was aborted"
+      },
+      {
+        "path": "/property-types",
+        "status": 0,
+        "error": "This operation was aborted"
+      },
+      {
+        "path": "/learn/what-is-cost-segregation",
+        "status": 0,
+        "error": "This operation was aborted"
+      },
+      {
+        "path": "/learn/how-a-cost-segregation-study-works",
+        "status": 0,
+        "error": "This operation was aborted"
+      },
+      {
+        "path": "/learn/why-depreciation-matters",
+        "status": 0,
+        "error": "This operation was aborted"
+      },
+      {
+        "path": "/tax-law/section-167-depreciation",
+        "status": 0,
+        "error": "This operation was aborted"
+      },
+      {
+        "path": "/tax-law/section-168-macrs",
+        "status": 0,
+        "error": "This operation was aborted"
+      },
+      {
+        "path": "/tax-law/section-168-k-bonus-depreciation",
+        "status": 0,
+        "error": "This operation was aborted"
+      },
+      {
+        "path": "/tax-law/mid-quarter-convention",
+        "status": 0,
+        "error": "This operation was aborted"
+      },
+      {
+        "path": "/tax-law/leasehold-improvement-considerations",
+        "status": 0,
+        "error": "This operation was aborted"
+      },
+      {
+        "path": "/tax-law/building-acquisition-and-basis-allocation",
+        "status": 0,
+        "error": "This operation was aborted"
+      },
+      {
+        "path": "/tax-law/related-party-acquisition-considerations",
+        "status": 0,
+        "error": "This operation was aborted"
+      },
+      {
+        "path": "/tax-law/rental-property-depreciation-rules",
+        "status": 0,
+        "error": "This operation was aborted"
+      },
+      {
+        "path": "/tax-law/capital-improvements-vs-repairs",
+        "status": 0,
+        "error": "This operation was aborted"
+      },
+      {
+        "path": "/tax-law/partial-asset-dispositions",
+        "status": 0,
+        "error": "This operation was aborted"
+      },
+      {
+        "path": "/tax-law/tax-law-updates-and-effective-dates",
+        "status": 0,
+        "error": "This operation was aborted"
+      },
+      {
+        "path": "/court-cases",
+        "status": 0,
+        "error": "This operation was aborted"
+      },
+      {
+        "path": "/court-cases/hospital-corporation-of-america-v-commissioner",
+        "status": 0,
+        "error": "This operation was aborted"
+      },
+      {
+        "path": "/court-cases/whiteco-industries-inc-v-commissioner",
+        "status": 0,
+        "error": "This operation was aborted"
+      },
+      {
+        "path": "/court-cases/commissioner-v-idaho-power-co",
+        "status": 0,
+        "error": "This operation was aborted"
+      },
+      {
+        "path": "/court-cases/commissioner-v-lincoln-savings-and-loan-association",
+        "status": 0,
+        "error": "This operation was aborted"
+      },
+      {
+        "path": "/court-cases/l-a-darling-co-v-commissioner",
+        "status": 0,
+        "error": "This operation was aborted"
+      },
+      {
+        "path": "/court-cases/massey-motors-inc-v-united-states",
+        "status": 0,
+        "error": "This operation was aborted"
+      },
+      {
+        "path": "/court-cases/sperry-and-hutchinson-co-v-commissioner",
+        "status": 0,
+        "error": "This operation was aborted"
+      },
+      {
+        "path": "/court-cases/clemens-v-commissioner",
+        "status": 0,
+        "error": "This operation was aborted"
+      },
+      {
+        "path": "/court-cases/estate-of-walling-v-commissioner",
+        "status": 0,
+        "error": "This operation was aborted"
+      },
+      {
+        "path": "/court-cases/scott-paper-co-v-commissioner",
+        "status": 0,
+        "error": "This operation was aborted"
+      },
+      {
+        "path": "/court-cases/plainfield-union-water-co-v-commissioner",
+        "status": 0,
+        "error": "This operation was aborted"
+      },
+      {
+        "path": "/court-cases/simon-v-commissioner",
+        "status": 0,
+        "error": "This operation was aborted"
+      },
+      {
+        "path": "/court-cases/personal-property-decisions",
+        "status": 0,
+        "error": "This operation was aborted"
+      },
+      {
+        "path": "/court-cases/plumbing-and-hvac-decisions",
+        "status": 0,
+        "error": "This operation was aborted"
+      },
+      {
+        "path": "/property-types/single-family-rental-properties",
+        "status": 0,
+        "error": "This operation was aborted"
+      },
+      {
+        "path": "/property-types/multifamily-apartment-buildings",
+        "status": 0,
+        "error": "This operation was aborted"
+      },
+      {
+        "path": "/property-types/condominiums-and-townhomes",
+        "status": 0,
+        "error": "This operation was aborted"
+      },
+      {
+        "path": "/property-types/build-to-rent-communities",
+        "status": 0,
+        "error": "This operation was aborted"
+      },
+      {
+        "path": "/property-types/student-housing",
+        "status": 0,
+        "error": "This operation was aborted"
+      },
+      {
+        "path": "/property-types/senior-living-facilities",
+        "status": 0,
+        "error": "This operation was aborted"
+      },
+      {
+        "path": "/property-types/assisted-living-facilities",
+        "status": 0,
+        "error": "This operation was aborted"
+      },
+      {
+        "path": "/asset-library/specialized-electrical-systems",
+        "status": 0,
+        "error": "This operation was aborted"
+      },
+      {
+        "path": "/asset-library/general-electrical-distribution",
+        "status": 0,
+        "error": "This operation was aborted"
+      },
+      {
+        "path": "/asset-library/dedicated-equipment-wiring",
+        "status": 0,
+        "error": "This operation was aborted"
+      },
+      {
+        "path": "/asset-library/decorative-and-specialty-lighting",
+        "status": 0,
+        "error": "This operation was aborted"
+      },
+      {
+        "path": "/asset-library/general-building-lighting",
+        "status": 0,
+        "error": "This operation was aborted"
+      },
+      {
+        "path": "/asset-library/plumbing-fixtures-and-specialty-plumbing",
+        "status": 0,
+        "error": "This operation was aborted"
+      },
+      {
+        "path": "/asset-library/hvac-and-climate-control-systems",
+        "status": 0,
+        "error": "This operation was aborted"
+      },
+      {
+        "path": "/asset-library/specialized-ventilation-systems",
+        "status": 0,
+        "error": "This operation was aborted"
+      },
+      {
+        "path": "/asset-library/flooring-and-floor-coverings",
+        "status": 0,
+        "error": "This operation was aborted"
+      },
+      {
+        "path": "/asset-library/carpeting-and-specialty-flooring",
+        "status": 0,
+        "error": "This operation was aborted"
+      },
+      {
+        "path": "/asset-library/cabinetry-and-built-in-casework",
+        "status": 0,
+        "error": "This operation was aborted"
+      },
+      {
+        "path": "/asset-library/specialized-millwork",
+        "status": 0,
+        "error": "This operation was aborted"
+      },
+      {
+        "path": "/asset-library/appliances-and-equipment",
+        "status": 0,
+        "error": "This operation was aborted"
+      },
+      {
+        "path": "/asset-library/restaurant-kitchen-equipment",
+        "status": 0,
+        "error": "This operation was aborted"
+      },
+      {
+        "path": "/asset-library/medical-and-specialty-equipment",
+        "status": 0,
+        "error": "This operation was aborted"
+      },
+      {
+        "path": "/asset-library/security-and-access-control-systems",
+        "status": 0,
+        "error": "This operation was aborted"
+      },
+      {
+        "path": "/asset-library/fire-protection-and-safety-systems",
+        "status": 0,
+        "error": "This operation was aborted"
+      },
+      {
+        "path": "/asset-library/landscaping-and-irrigation",
+        "status": 0,
+        "error": "This operation was aborted"
+      },
+      {
+        "path": "/asset-library/parking-lots-sidewalks-and-paving",
+        "status": 0,
+        "error": "This operation was aborted"
+      },
+      {
+        "path": "/asset-library/fencing-gates-and-site-features",
+        "status": 0,
+        "error": "This operation was aborted"
+      },
+      {
+        "path": "/asset-library/roofing-and-structural-components",
+        "status": 0,
+        "error": "This operation was aborted"
+      },
+      {
+        "path": "/asset-library/asset-classification-evidence-and-documentation",
+        "status": 0,
+        "error": "This operation was aborted"
+      },
+      {
+        "path": "/case-studies",
+        "status": 0,
+        "error": "This operation was aborted"
+      },
+      {
+        "path": "/case-studies/single-family-rental-acquisition",
+        "status": 0,
+        "error": "This operation was aborted"
+      },
+      {
+        "path": "/case-studies/multifamily-acquisition",
+        "status": 0,
+        "error": "This operation was aborted"
+      },
+      {
+        "path": "/case-studies/hotel-property",
+        "status": 0,
+        "error": "This operation was aborted"
+      },
+      {
+        "path": "/case-studies/restaurant-property",
+        "status": 0,
+        "error": "This operation was aborted"
+      },
+      {
+        "path": "/case-studies/warehouse",
+        "status": 0,
+        "error": "This operation was aborted"
+      },
+      {
+        "path": "/case-studies/medical-facility",
+        "status": 0,
+        "error": "This operation was aborted"
+      },
+      {
+        "path": "/case-studies/cost-estimation-and-reconciliation",
+        "status": 0,
+        "error": "This operation was aborted"
+      },
+      {
+        "path": "/case-studies/how-to-interpret-a-final-asset-schedule",
+        "status": 0,
+        "error": "This operation was aborted"
+      },
+      {
+        "path": "/knowledge-hub",
+        "status": 0,
+        "error": "This operation was aborted"
+      },
+      {
+        "path": "/resources/court-case-index",
+        "status": 0,
+        "error": "This operation was aborted"
+      },
+      {
+        "path": "/resources/tax-code-and-regulation-index",
+        "status": 0,
+        "error": "This operation was aborted"
+      },
+      {
+        "path": "/resources/irs-publications-and-forms-index",
+        "status": 0,
+        "error": "This operation was aborted"
+      },
+      {
+        "path": "/resources/property-type-guide-index",
+        "status": 0,
+        "error": "This operation was aborted"
+      },
+      {
+        "path": "/resources/asset-classification-index",
+        "status": 0,
+        "error": "This operation was aborted"
+      },
+      {
+        "path": "/resources/cost-segregation-glossary",
+        "status": 0,
+        "error": "This operation was aborted"
+      },
+      {
+        "path": "/resources/macrs-and-depreciation-glossary",
+        "status": 0,
+        "error": "This operation was aborted"
+      },
+      {
+        "path": "/resources/engineering-and-construction-glossary",
+        "status": 0,
+        "error": "This operation was aborted"
+      },
+      {
+        "path": "/resources/bonus-depreciation-reference-guide",
+        "status": 0,
+        "error": "This operation was aborted"
+      },
+      {
+        "path": "/resources/research-methodology",
+        "status": 0,
+        "error": "This operation was aborted"
+      },
+      {
+        "path": "/resources/source-and-citation-standards",
+        "status": 0,
+        "error": "This operation was aborted"
+      },
+      {
+        "path": "/resources/content-review-and-update-policy",
+        "status": 0,
+        "error": "This operation was aborted"
+      },
+      {
+        "path": "/resources/tax-law-update-archive",
+        "status": 0,
+        "error": "This operation was aborted"
+      },
+      {
+        "path": "/resources/research-library-disclaimer",
+        "status": 0,
+        "error": "This operation was aborted"
+      },
+      {
+        "path": "/legal/privacy",
+        "status": 0,
+        "error": "This operation was aborted"
+      },
+      {
+        "path": "/legal/terms",
+        "status": 0,
+        "error": "This operation was aborted"
+      },
+      {
+        "path": "/tools/questionnaire",
+        "status": 0,
+        "error": "This operation was aborted"
+      },
+      {
+        "path": "/tools/workflow-explorer",
+        "status": 0,
+        "error": "This operation was aborted"
+      }
+    ],
+    "noindexOnClientPages": [],
+    "mode": "http",
+    "sitemapStatus": 200,
+    "sitemapMissingClient": [],
+    "sitemapExtras": [
+      "/learn",
+      "/legal/privacy",
+      "/legal/terms",
+      "/resources",
+      "/tax-law",
+      "/tools",
+      "/tools/questionnaire",
+      "/tools/workflow-explorer"
+    ],
+    "sampleRobots": [
+      {
+        "path": "/",
+        "status": 0,
+        "robots": null
+      },
+      {
+        "path": "/learn/what-is-cost-segregation",
+        "status": 0,
+        "robots": null
+      },
+      {
+        "path": "/tax-law/section-168-macrs",
+        "status": 0,
+        "robots": null
+      },
+      {
+        "path": "/court-cases/hospital-corporation-of-america-v-commissioner",
+        "status": 0,
+        "robots": null
+      },
+      {
+        "path": "/property-types/multifamily-apartment-buildings",
+        "status": 0,
+        "robots": null
+      },
+      {
+        "path": "/asset-library/specialized-electrical-systems",
+        "status": 0,
+        "robots": null
+      },
+      {
+        "path": "/case-studies/multifamily-acquisition",
+        "status": 0,
+        "robots": null
+      },
+      {
+        "path": "/resources/research-library-disclaimer",
+        "status": 0,
+        "robots": null
+      },
+      {
+        "path": "/knowledge-hub",
+        "status": 0,
+        "robots": null
+      }
+    ]
+  },
+  "checks": [
+    {
+      "id": "C1",
+      "name": "Client 187 paths in pageRegistry",
+      "pass": true
+    },
+    {
+      "id": "C2",
+      "name": "Articles indexable (client override)",
+      "pass": true
+    },
+    {
+      "id": "C3",
+      "name": "Expected sitemap size 195 (187+8)",
+      "pass": true
+    },
+    {
+      "id": "C4",
+      "name": "Local server reachable for HTTP probe",
+      "pass": true
+    },
+    {
+      "id": "C5",
+      "name": "All client 187 URLs return HTTP 200",
+      "pass": false
+    },
+    {
+      "id": "C6",
+      "name": "Sitemap includes all client 187",
+      "pass": true
+    },
+    {
+      "id": "C7",
+      "name": "No noindex on client catalog HTML pages",
+      "pass": true
+    },
+    {
+      "id": "C8",
+      "name": "Calculator remains gated (noindex or non-public)",
+      "pass": true
+    }
+  ],
+  "summary": {
+    "pass": 7,
+    "fail": 1,
+    "overall": "NOT_READY"
+  }
+}

@@ -1,17 +1,24 @@
 import {
-  FileSearch,
-  MessageSquare,
+  ClipboardList,
+  Settings2,
   ShieldCheck,
-  Workflow,
+  Users,
 } from "lucide-react";
-import { Container } from "@/components/layout/Container";
 import { cn } from "@/lib/cn";
 
-const icons = [Workflow, ShieldCheck, MessageSquare, FileSearch];
+const icons = [ShieldCheck, ClipboardList, Settings2, Users];
 
 type TrustItem = { title: string; body?: string };
 
-/** Slim trust strip inside hero (design-board foot bar). Soft labels only. */
+/** Split "Engineer-reviewed delivery" → ["Engineer-reviewed", "delivery"] for the board-style two-line label. */
+function splitTitle(title: string): [string, string] {
+  const trimmed = title.trim();
+  const i = trimmed.lastIndexOf(" ");
+  if (i <= 0) return [trimmed, ""];
+  return [trimmed.slice(0, i), trimmed.slice(i + 1)];
+}
+
+/** Glass trust strip at hero foot (design-board style). Soft labels only. */
 export function TrustBar({
   items,
   className,
@@ -20,34 +27,38 @@ export function TrustBar({
   className?: string;
 }) {
   return (
-    <div
-      className={cn(
-        "relative z-10 border-t border-white/10 bg-ink/90 backdrop-blur-sm",
-        className,
-      )}
-    >
-      <Container>
-        <ul className="grid grid-cols-2 justify-items-center gap-x-4 gap-y-6 py-6 md:grid-cols-4 md:gap-x-6 lg:justify-items-stretch lg:gap-8 lg:py-6">
+    <div className={cn("relative z-10 px-3 pt-2 pb-8 sm:px-5 sm:pb-10 lg:px-8 lg:pb-12", className)}>
+      <div className="mx-auto w-full max-w-[1120px]">
+        <ul
+          className={cn(
+            "grid grid-cols-2 lg:grid-cols-4",
+            "overflow-hidden rounded-2xl border border-white/12 sm:rounded-[1.25rem]",
+            "bg-[#141618]/85 shadow-[0_12px_40px_rgba(0,0,0,0.35)] backdrop-blur-md",
+            "divide-x divide-y divide-white/10 lg:divide-y-0",
+          )}
+        >
           {items.map((item, index) => {
             const Icon = icons[index % icons.length];
+            const [line1, line2] = splitTitle(item.title);
             return (
               <li
                 key={item.title}
-                className="flex max-w-[11rem] flex-col items-center gap-2 text-center md:max-w-none lg:max-w-none lg:flex-row lg:items-center lg:gap-3 lg:text-left"
+                className="flex items-center gap-3 px-4 py-4 sm:gap-3.5 sm:px-5 sm:py-5"
               >
                 <Icon
-                  className="size-[18px] shrink-0 text-lime"
+                  className="size-5 shrink-0 text-lime sm:size-[22px]"
                   aria-hidden
-                  strokeWidth={2}
+                  strokeWidth={1.75}
                 />
-                <p className="text-[12px] font-medium leading-snug text-white/95 sm:text-[13px]">
-                  {item.title}
+                <p className="text-[12px] font-semibold leading-[1.25] tracking-tight text-white sm:text-[13px]">
+                  <span className="block">{line1}</span>
+                  {line2 ? <span className="block">{line2}</span> : null}
                 </p>
               </li>
             );
           })}
         </ul>
-      </Container>
+      </div>
     </div>
   );
 }

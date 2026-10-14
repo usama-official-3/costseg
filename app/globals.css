@@ -152,6 +152,11 @@
   animation: cs-reveal 0.7s ease-out both;
 }
 
+/* Knowledge article reading measure */
+.cs-prose-measure {
+  max-width: 42rem;
+}
+
 @media (prefers-reduced-motion: reduce) {
   .cs-loader-tile {
     animation: none;

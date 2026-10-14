@@ -14,17 +14,20 @@ import { cn } from "@/lib/cn";
 export function SiteHeader() {
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
+  const [menuPath, setMenuPath] = useState(pathname);
   const [backdropEnabled, setBackdropEnabled] = useState(false);
 
-  useEffect(() => {
+  // Close the drawer when the route changes (adjust state during render).
+  if (pathname !== menuPath) {
+    setMenuPath(pathname);
     setOpen(false);
-  }, [pathname]);
+  }
+  if (!open && backdropEnabled) {
+    setBackdropEnabled(false);
+  }
 
   useEffect(() => {
-    if (!open) {
-      setBackdropEnabled(false);
-      return;
-    }
+    if (!open) return;
     const id = window.setTimeout(() => setBackdropEnabled(true), 400);
     return () => window.clearTimeout(id);
   }, [open]);
@@ -50,8 +53,8 @@ export function SiteHeader() {
     <>
       <header className="sticky top-0 z-[80] border-b border-white/10 bg-ink text-white">
         <Container className="flex h-16 min-h-16 items-center gap-3">
-          <div className="min-w-0 flex-1 overflow-hidden">
-            <Logo variant="on-dark" priority />
+          <div className="min-w-0 flex-1 overflow-x-clip">
+            <Logo variant="on-dark" priority className="max-w-full" />
           </div>
 
           <nav

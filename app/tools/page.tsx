@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import { buildPageMetadata } from "@/lib/seo/pageMetadata";
 import Link from "next/link";
 import { ClipboardList, GitBranch, Calculator } from "lucide-react";
 import { Hero } from "@/components/marketing/Hero";
@@ -7,11 +7,12 @@ import { Section } from "@/components/layout/Section";
 import { Card } from "@/components/ui/Card";
 import { Badge } from "@/components/ui/Badge";
 
-export const metadata: Metadata = {
+export const metadata = buildPageMetadata({
   title: "Tools",
   description:
     "CostSeg SI frontend tools: property questionnaire and Super Intelligence workflow explorer. Calculator remains gated.",
-};
+  path: "/tools",
+});
 
 const tools = [
   {

@@ -34,7 +34,7 @@ export function Hero({
   eyebrow,
   title,
   support,
-  primaryHref = "/contact",
+  primaryHref = "/request-a-study",
   primaryLabel = "Get Started",
   secondaryHref,
   secondaryLabel,

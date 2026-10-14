@@ -24,10 +24,10 @@ export default function NotFound() {
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
             <LinkButton href="/">Home</LinkButton>
-            <LinkButton href="/knowledge" variant="secondary">
+            <LinkButton href="/knowledge-hub" variant="secondary">
               Knowledge Hub
             </LinkButton>
-            <LinkButton href="/contact" variant="secondary">
+            <LinkButton href="/request-a-study" variant="secondary">
               Contact
             </LinkButton>
           </div>

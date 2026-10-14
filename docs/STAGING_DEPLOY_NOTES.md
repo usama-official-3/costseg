@@ -1,89 +1,85 @@
 # Staging Deploy Notes — CostSeg SI
 
 **Status:** Prepared for staging when host access is available (OQ-13).  
-**Not authorized:** Production cutover to `costseg.si` without a separate explicit production-deploy approval.
+**Not authorized:** Production cutover to `costseg.si` without a separate explicit production-deploy approval (Phase 9).
 
 ## Runtime
 
 | Item | Value |
 |---|---|
 | App | Next.js 16.4 App Router (`costseg-si`) |
-| Node | **20.9+** required; verified local build on **22.11.0** |
-| Package manager | npm (`package-lock.json` present — use `npm ci`) |
-| Start command | `npm run build` then `npm start` (or standalone — see below) |
+| Node | **20.9+** required; verified local build on **22.x** |
+| Package manager | npm (`package-lock.json` — use `npm ci`) |
+| Start | `npm run build` then `npm start` |
 | Default port | `3000` (`PORT` env overrides) |
 
 ## Recommended staging topology
 
-1. **Staging hostname** (example): `staging.costseg.si` or IP + hosts entry — confirm with owner.
-2. **Reverse proxy** (Nginx/Caddy) → Node process on `127.0.0.1:3000`.
-3. **TLS** via Let’s Encrypt (or host-provided cert) on the staging hostname.
-4. **Access control:** HTTP basic auth or VPN preferred so draft knowledge content is not indexed.
-5. **Process manager:** systemd or PM2 with restart-on-boot.
+1. Staging hostname (example): `staging.costseg.si` — confirm with owner.  
+2. Reverse proxy (Nginx/Caddy) → `127.0.0.1:3000`.  
+3. TLS via Let’s Encrypt (or host cert).  
+4. **Access control:** HTTP basic auth or VPN so draft knowledge is not publicly crawled.  
+5. Process manager: systemd or PM2.
 
-## Build & run (standard)
+## Build & run
 
 ```bash
 git clone <repo> && cd CostSeg_SI
 npm ci
+# Optional staging crawl block:
+# export COSTSEG_NOINDEX=1
 npm run build
 npm start
 ```
 
-Smoke after start: open `/`, `/knowledge`, `/tools`, `/contact`, `/sitemap.xml`, `/robots.txt`.
+Smoke after start:
 
-## Optional: standalone output (VPS / Docker)
-
-If the host prefers a minimal artifact, enable in `next.config.ts`:
-
-```ts
-output: "standalone",
-```
-
-Then after `npm run build`:
-
-1. Copy `public` → `.next/standalone/public`
-2. Copy `.next/static` → `.next/standalone/.next/static`
-3. Run `node .next/standalone/server.js` with `HOSTNAME=127.0.0.1` and `PORT=3000`
-
-Do **not** enable standalone until the staging host method is confirmed (OQ-13).
+- `/`
+- `/how-cost-segregation-works`
+- `/knowledge-hub`
+- `/learn/what-is-cost-segregation` (expect draft / noindex)
+- `/tools`, `/tools/questionnaire`, `/tools/workflow-explorer`
+- `/tools/calculator` (gated)
+- `/contact`, `/request-a-study`
+- `/sitemap.xml`, `/robots.txt`
 
 ## Staging SEO guardrails
 
-Current `app/robots.ts` **allows** indexing for production domain `https://costseg.si`.
+| Control | Behavior |
+|---|---|
+| `COSTSEG_NOINDEX=1` | `robots.txt` Disallow `/` |
+| `VERCEL_ENV=preview` | Same disallow (automatic) |
+| Production unset | Allow `/`, disallow `/tools/calculator` |
+| Draft articles | `noindex` via metadata; omitted from sitemap |
 
-Before any public staging URL:
-
-- Prefer auth / noindex at the proxy layer, **or**
-- Temporarily set staging `robots` to `Disallow: /` via env-aware config once env strategy is approved
-- Do not point production DNS (`costseg.si`) at staging without production approval
+Do **not** point production DNS (`costseg.si`) at staging without Phase 9 approval.
 
 ## Environment variables
 
-Frontend-first build: **no required secrets** for marketing pages or mock lead submit.
-
-| Variable | Needed when |
+| Variable | When |
 |---|---|
-| Lead webhook / email destination | OQ-08 resolved |
-| Analytics IDs | OQ-12 resolved |
-| `NODE_ENV=production` | Set by `next start` automatically |
+| `COSTSEG_NOINDEX=1` | Public staging without auth |
+| Lead webhook / email | After OQ-08 |
+| Analytics IDs | After OQ-12 |
 
-Add a `.env.example` only after live integrations are approved.
+Frontend-first: **no required secrets** for marketing + mock leads.
 
-## Post-deploy staging checklist (owner)
+## Optional standalone output
 
-- [ ] HTTPS valid; no mixed content
-- [ ] Home hero + logo lockup render
-- [ ] Desktop header + mobile bottom nav (Home / Research / Tools / Contact)
-- [ ] Contact + Request Study: validation errors + mock success
-- [ ] Knowledge search/filter + one sample article per group
-- [ ] Questionnaire multi-step submit (mock)
-- [ ] Workflow explorer navigable; calculator remains gated
-- [ ] `/sitemap.xml` and `/robots.txt` reachable
-- [ ] 404 page branded recovery links
-- [ ] No horizontal scroll at 320px on Home / Knowledge / Contact
-- [ ] Lighthouse (mobile) on Home + one article — record scores in Phase 9 report appendix when run
+Enable `output: "standalone"` in `next.config.ts` only after host method is confirmed (OQ-13).
+
+## Post-deploy checklist
+
+- [ ] HTTPS valid; no mixed content  
+- [ ] Home hero + logo lockup  
+- [ ] Desktop header + mobile bottom nav  
+- [ ] Contact + Request Study: validation + mock success  
+- [ ] Knowledge Hub search + draft article badges  
+- [ ] Questionnaire + workflow explorer; calculator gated  
+- [ ] `/sitemap.xml` and `/robots.txt`  
+- [ ] No horizontal scroll at 320px on Home / Hub / Contact  
+- [ ] Lighthouse (mobile) Home + one article — record when run  
 
 ## Blockers before production
 
-See `docs/OPEN_QUESTIONS.md` — especially OQ-08 (leads), OQ-04/09 (legal/content review), OQ-13 (VPS/DNS/SSL), OQ-12 (analytics).
+OQ-13 (VPS/DNS/SSL), OQ-08 (leads), OQ-02/OQ-04 (content review before indexing drafts), OQ-09 (legal), OQ-12 (analytics).

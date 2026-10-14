@@ -24,44 +24,64 @@ export const homeCopy = {
       body: "Work product oriented around evidence, classifications, and review trails.",
     },
   ],
+  servicesSection: {
+    title: "More Than a Study.\nA Smarter Approach.",
+    lead:
+      "We provide detailed cost segregation studies using advanced technology and industry expertise to help you reduce tax liability and increase cash flow.",
+  },
   services: [
     {
-      title: "Cost segregation study",
-      body: "Engineering-oriented studies that reclassify qualifying building components into shorter recovery periods where appropriate.",
+      title: "Cost Segregation Study",
+      body: "Detailed analysis of your property's components and costs.",
       href: "/services",
     },
     {
-      title: "Tax strategy support",
-      body: "Coordination-ready outputs your CPA can use when evaluating depreciation strategy.",
+      title: "Tax Strategy Support",
+      body: "Identify opportunities for accelerated depreciation.",
       href: "/services",
     },
     {
-      title: "Asset classification",
-      body: "Component-level analysis across personal property, land improvements, and building structure.",
+      title: "Asset Classification",
+      body: "Classify assets by IRS guidelines (5, 7, 15, 39 years).",
       href: "/services",
     },
     {
-      title: "Detailed reporting",
-      body: "Schedules and documentation prepared for professional filing support — not DIY tax advice.",
+      title: "Detailed Reporting",
+      body: "IRS-ready reports with clear asset schedules.",
       href: "/services",
     },
   ],
+  technology: {
+    eyebrow: "Our Technology",
+    titleLead: "Super",
+    titleRest: "Intelligence",
+    support:
+      "Our multi-agent system is designed around real estate tax concepts, engineering methods, and data extraction — working together to support accurate, efficient, and compliant study preparation. Capabilities shown here are explanatory.",
+    ctaLabel: "Learn More About Our Technology",
+    ctaHref: "/technology",
+    flow: [
+      "Document Ingestion",
+      "AI Agent Collaboration",
+      "Classification & Optimization",
+      "Human Review & Audit Trail",
+    ],
+  },
   siSteps: [
     {
-      title: "Document ingestion",
-      body: "Extract relevant information from blueprints, ledgers, invoices, and closing documents.",
+      title: "1. Document Ingestion & Blueprint Analysis",
+      body: "Designed to extract data from plans, receipts, and invoices using computer vision and NLP techniques.",
     },
     {
-      title: "Classification",
-      body: "Normalize data and evaluate asset classifications against applicable depreciation rules.",
+      title: "2. Component Classification & Life-Cycle Matching",
+      body: "Organizes assets against common recovery-period categories and flags bonus-depreciation considerations for review.",
     },
     {
-      title: "Cost estimation",
-      body: "Where appropriate, estimate missing or bundled costs using documented methods and data.",
+      title: "3. Engineering-Based Cost Estimation",
+      body: "Where costs are missing or bundled, applies documented engineering-based estimation methods.",
     },
     {
-      title: "Quality & review",
-      body: "Flag anomalies, retain supporting evidence, and submit results for professional review.",
+      title: "4. Human-in-the-Loop Review & Audit Trails",
+      body: "Runs anomaly checks and routes results for professional review with supporting evidence retained.",
     },
   ],
   audiences: [

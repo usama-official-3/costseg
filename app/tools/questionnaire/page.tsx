@@ -1,13 +1,14 @@
-import type { Metadata } from "next";
+import { buildPageMetadata } from "@/lib/seo/pageMetadata";
 import { ToolLayout } from "@/components/tools/ToolLayout";
 import { QuestionnaireForm } from "@/components/tools/QuestionnaireForm";
 import { LinkButton } from "@/components/ui/LinkButton";
 
-export const metadata: Metadata = {
-  title: "Property Study Questionnaire",
+export const metadata = buildPageMetadata({
+  title: "Property questionnaire",
   description:
-    "CostSeg SI property study questionnaire for lead qualification. Frontend preview with mock submission.",
-};
+    "Property study questionnaire preview for CostSeg SI lead qualification.",
+  path: "/tools/questionnaire",
+});
 
 export default function QuestionnairePage() {
   return (

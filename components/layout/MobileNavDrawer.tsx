@@ -10,7 +10,6 @@ import {
   Info,
   Mail,
   Route,
-  Wrench,
   X,
   type LucideIcon,
 } from "lucide-react";
@@ -20,9 +19,8 @@ import { cn } from "@/lib/cn";
 
 const navIcons: Record<(typeof primaryNav)[number]["href"], LucideIcon> = {
   "/": Home,
-  "/how-it-works": Route,
-  "/knowledge": BookOpen,
-  "/tools": Wrench,
+  "/how-cost-segregation-works": Route,
+  "/knowledge-hub": BookOpen,
   "/property-types": Building2,
   "/about": Info,
   "/contact": Mail,

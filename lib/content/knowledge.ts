@@ -1,4 +1,5 @@
-import { knowledgeSamples } from "@/content/knowledge/samples";
+import { allKnowledgeArticles } from "@/content/knowledge/articles";
+import { getGroupRootPath } from "@/lib/content/groupRoots";
 import type { KnowledgeArticle, KnowledgeGroup } from "@/lib/schemas/knowledge";
 
 const groupMeta: Record<
@@ -7,37 +8,37 @@ const groupMeta: Record<
 > = {
   fundamentals: {
     label: "Fundamentals",
-    href: "/knowledge/fundamentals",
+    href: "/learn",
     description: "Core cost segregation and depreciation concepts.",
   },
   "tax-law": {
     label: "Tax law & IRS",
-    href: "/knowledge/tax-law",
+    href: "/tax-law",
     description: "Code, regulations, and IRS resource overviews.",
   },
   cases: {
     label: "Court cases",
-    href: "/knowledge/cases",
+    href: "/court-cases",
     description: "Research shortlist and verified case templates.",
   },
   properties: {
     label: "Property guides",
-    href: "/knowledge/properties",
+    href: "/property-types",
     description: "Property-type educational guides.",
   },
   assets: {
     label: "Asset library",
-    href: "/knowledge/assets",
+    href: "/asset-library",
     description: "Asset classification education notes.",
   },
   studies: {
     label: "Case studies",
-    href: "/knowledge/studies",
+    href: "/case-studies",
     description: "Illustrative worked examples.",
   },
   resources: {
     label: "Resources",
-    href: "/knowledge/resources",
+    href: "/resources",
     description: "Indexes, glossaries, and disclaimers.",
   },
 };
@@ -54,15 +55,15 @@ export function listGroups() {
 }
 
 export function getAllArticles(): KnowledgeArticle[] {
-  return knowledgeSamples;
+  return allKnowledgeArticles;
 }
 
 export function getArticleBySlug(slug: string): KnowledgeArticle | undefined {
-  return knowledgeSamples.find((article) => article.slug === slug);
+  return allKnowledgeArticles.find((article) => article.slug === slug);
 }
 
 export function getArticlesByGroup(group: KnowledgeGroup): KnowledgeArticle[] {
-  return knowledgeSamples.filter((article) => article.group === group);
+  return allKnowledgeArticles.filter((article) => article.group === group);
 }
 
 export function getRelatedArticles(article: KnowledgeArticle): KnowledgeArticle[] {
@@ -72,5 +73,16 @@ export function getRelatedArticles(article: KnowledgeArticle): KnowledgeArticle[
 }
 
 export function getArticlePath(article: KnowledgeArticle): string {
-  return `/knowledge/${article.group}/${article.slug}`;
+  return `${getGroupRootPath(article.group)}/${article.slug}`;
+}
+
+/**
+ * Indexability gate for sitemap + article robots metadata.
+ *
+ * Original Default B: only `reviewed` | `verified`.
+ * **Client override 2026-10-14:** index all Knowledge Hub articles for production.
+ * Calculator remains excluded via routes / robots (not this helper).
+ */
+export function isArticleIndexable(_article: KnowledgeArticle): boolean {
+  return true;
 }

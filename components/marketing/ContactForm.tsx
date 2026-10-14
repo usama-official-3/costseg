@@ -179,7 +179,7 @@ export function ContactForm({
         </Button>
         <p className="text-xs text-muted">
           By submitting, you agree we may contact you about this inquiry. See{" "}
-          <a href="/privacy" className="font-semibold underline-offset-2 hover:underline">
+          <a href="/legal/privacy" className="font-semibold underline-offset-2 hover:underline">
             Privacy
           </a>
           .

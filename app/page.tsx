@@ -29,19 +29,23 @@ export default function Home() {
           </>
         }
         support={homeCopy.hero.support}
-        primaryHref="/contact"
+        primaryHref="/request-a-study"
         primaryLabel="Get Started"
-        secondaryHref="/how-it-works"
+        secondaryHref="/how-cost-segregation-works"
         secondaryLabel="Learn How It Works"
         media={siteImages.hero}
         trustItems={homeCopy.trust}
         compact={false}
       />
-      <ServicesGrid items={homeCopy.services} />
+      <ServicesGrid
+        items={homeCopy.services}
+        title={homeCopy.servicesSection.title}
+        lead={homeCopy.servicesSection.lead}
+      />
       <SiWorkflowBand steps={homeCopy.siSteps} />
       <AudienceGrid items={homeCopy.audiences} />
       <FaqPreview items={homeCopy.faqs} />
-      <CtaBand />
+      <CtaBand tone="ink" />
     </main>
   );
 }

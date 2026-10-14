@@ -78,9 +78,10 @@ Checks: no overflow, readable type, touch targets, images aspect ratios, bottom 
 - **P2** Medium — polish, secondary pages  
 - **P3** Low — copy tweaks  
 
-## Phase mapping
+## Phase mapping (canonical — `PHASE_TRACKER.md`)
 
-- Phase 4: shell smoke  
-- Phase 5–7: feature tests  
-- Phase 8: full matrix + a11y/SEO/perf  
-- Phase 9: staging verification report  
+- Phase 5: design polish  
+- Phase 6: SEO check  
+- Phase 7: QA hardening  
+- Phase 8: staging prep report  
+- Phase 9: production approve (separate)  

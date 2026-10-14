@@ -1,14 +1,15 @@
-import type { Metadata } from "next";
 import { CtaBand } from "@/components/marketing/CtaBand";
 import { Hero } from "@/components/marketing/Hero";
 import { Container } from "@/components/layout/Container";
 import { Section } from "@/components/layout/Section";
+import { buildPageMetadata } from "@/lib/seo/pageMetadata";
 
-export const metadata: Metadata = {
+export const metadata = buildPageMetadata({
   title: "About CostSeg SI",
   description:
     "About CostSeg SI — Super Intelligence–positioned cost segregation study preparation.",
-};
+  path: "/about",
+});
 
 export default function AboutPage() {
   return (
@@ -21,10 +22,11 @@ export default function AboutPage() {
       <Section surface="paper" className="py-14">
         <Container className="max-w-3xl space-y-4 text-muted">
           <p>
-            Our positioning emphasizes <strong className="text-ink">Super Intelligence</strong>{" "}
-            workflows that help organize documents, classify components, and
-            prepare study materials more efficiently — without inventing
-            credentials or promising outcomes we cannot substantiate.
+            Our positioning emphasizes{" "}
+            <strong className="text-ink">Super Intelligence</strong> workflows
+            that help organize documents, classify components, and prepare study
+            materials more efficiently — without inventing credentials or
+            promising outcomes we cannot substantiate.
           </p>
           <p>
             Company biography, team credentials, testimonials, and partner logos
@@ -36,7 +38,7 @@ export default function AboutPage() {
           </p>
         </Container>
       </Section>
-      <CtaBand title="Connect with CostSeg SI" />
+      <CtaBand title="Connect with CostSeg SI" tone="ink" />
     </main>
   );
 }
