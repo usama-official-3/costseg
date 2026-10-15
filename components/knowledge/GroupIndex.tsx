@@ -33,19 +33,19 @@ export function GroupIndex({ group }: { group: KnowledgeGroup }) {
               { label: meta.label },
             ]}
           />
-          <div className="mt-6 flex flex-col gap-2 sm:flex-row sm:items-end sm:justify-between">
+          <div className="mt-6 flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
             <div>
               <h2 className="text-xl font-bold tracking-tight text-ink sm:text-2xl">
                 Articles in this group
               </h2>
-              <p className="mt-2 max-w-2xl text-sm text-muted">
+              <p className="mt-2 max-w-2xl text-sm leading-relaxed text-muted">
                 Educational Knowledge Hub pages for this group. Content is
                 general information — not individualized tax advice.
               </p>
             </div>
-            <p className="shrink-0 text-sm font-semibold text-ink">
+            <span className="inline-flex shrink-0 items-center rounded-full bg-[#f0f4df] px-3 py-1.5 text-[11px] font-extrabold uppercase tracking-[0.12em] text-ink">
               {articles.length} pages
-            </p>
+            </span>
           </div>
           <div className="mt-8">
             <ResultList articles={articles} columns={2} />

@@ -61,7 +61,10 @@ export default function PropertyTypesPage() {
             <p className="mt-2 max-w-2xl text-sm text-muted">
               Draft educational samples — not indexed until reviewStatus is
               approved.{" "}
-              <Link href="/knowledge-hub" className="font-semibold hover:underline">
+              <Link
+                href="/knowledge-hub"
+                className="font-semibold transition-colors hover:text-muted"
+              >
                 Knowledge Hub
               </Link>
             </p>

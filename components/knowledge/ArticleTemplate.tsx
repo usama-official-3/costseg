@@ -102,14 +102,14 @@ export function ArticleTemplate({ article }: { article: KnowledgeArticle }) {
               <p className="mt-3 text-xs text-muted">
                 <Link
                   href={group.href}
-                  className="font-semibold hover:underline"
+                  className="font-semibold transition-colors hover:text-muted"
                 >
                   More in {group.label}
                 </Link>
                 {" · "}
                 <Link
                   href="/knowledge-hub"
-                  className="font-semibold hover:underline"
+                  className="font-semibold transition-colors hover:text-muted"
                 >
                   Knowledge Hub
                 </Link>

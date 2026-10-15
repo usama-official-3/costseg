@@ -1,6 +1,7 @@
 import { SiteFooter } from "@/components/layout/SiteFooter";
 import { SiteHeader } from "@/components/layout/SiteHeader";
 import { MobileBottomNav } from "@/components/layout/MobileBottomNav";
+import { ScrollToTopButton } from "@/components/layout/ScrollToTopButton";
 import { SkipToContent } from "@/components/layout/SkipToContent";
 
 type SiteShellProps = {
@@ -18,6 +19,7 @@ export function SiteShell({ children }: SiteShellProps) {
         <SiteFooter />
       </div>
       <MobileBottomNav />
+      <ScrollToTopButton />
     </>
   );
 }

@@ -127,7 +127,10 @@ export function Hero({
               {secondaryHref && secondaryLabel ? (
                 <LinkButton href={secondaryHref} variant="secondary" size="lg" pill>
                   {secondaryLabel}
-                  <ArrowRight className="size-4" aria-hidden />
+                  <ArrowRight
+                    className="size-4 transition-transform duration-300 ease-out group-hover:translate-x-0.5"
+                    aria-hidden
+                  />
                 </LinkButton>
               ) : null}
             </div>

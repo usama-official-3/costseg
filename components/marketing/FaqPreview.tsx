@@ -30,7 +30,7 @@ export function FaqPreview({
           {showViewAll ? (
             <Link
               href={href}
-              className="text-sm font-bold text-ink underline-offset-4 hover:underline"
+              className="text-sm font-bold text-ink transition-colors hover:text-muted"
             >
               View all FAQs
             </Link>

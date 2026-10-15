@@ -20,7 +20,7 @@ export function SourceList({ sources }: { sources: KnowledgeArticle["sources"] }
           {source.href ? (
             <a
               href={source.href}
-              className="font-semibold text-ink underline-offset-2 hover:underline"
+              className="font-semibold text-ink transition-colors hover:text-muted"
               target="_blank"
               rel="noopener noreferrer"
             >

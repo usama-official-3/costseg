@@ -15,7 +15,7 @@ export function RelatedLinks({ articles }: { articles: KnowledgeArticle[] }) {
           <li key={article.slug} className="py-3 first:pt-0 last:pb-0">
             <Link
               href={getArticlePath(article)}
-              className="text-sm font-semibold text-ink underline-offset-2 hover:underline"
+              className="text-sm font-semibold text-ink transition-colors hover:text-muted"
             >
               {article.title}
             </Link>

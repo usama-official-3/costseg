@@ -31,11 +31,11 @@ export function Logo({
     <Image
       src={variants[variant]}
       alt={brand.name}
-      width={stacked ? 140 : 180}
-      height={stacked ? 120 : 40}
+      width={stacked ? 140 : 200}
+      height={stacked ? 120 : 44}
       priority={priority}
       className={cn(
-        stacked ? "h-auto w-[120px]" : "h-8 w-auto max-w-full sm:h-9",
+        stacked ? "h-auto w-[120px]" : "h-10 w-auto max-w-full",
         // Official on-dark PNGs ship with an opaque near-black plate; lighten
         // blends that plate into ink headers without editing the asset.
         onDark && "mix-blend-lighten",
@@ -49,7 +49,7 @@ export function Logo({
   return (
     <Link
       href={href}
-      className="inline-flex shrink-0 bg-transparent outline-none [-webkit-tap-highlight-color:transparent] focus-visible:rounded-[8px]"
+      className="inline-flex h-11 shrink-0 items-center bg-transparent outline-none [-webkit-tap-highlight-color:transparent] focus-visible:rounded-[8px]"
       aria-label={brand.name}
     >
       {image}

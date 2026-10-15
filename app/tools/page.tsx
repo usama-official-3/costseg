@@ -67,7 +67,10 @@ export default function ToolsPage() {
                       </Badge>
                     </div>
                     <h2 className="text-lg font-bold">
-                      <Link href={tool.href} className="hover:underline">
+                      <Link
+                        href={tool.href}
+                        className="transition-colors hover:text-muted"
+                      >
                         {tool.title}
                       </Link>
                     </h2>

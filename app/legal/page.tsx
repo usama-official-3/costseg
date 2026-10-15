@@ -28,7 +28,10 @@ export default function LegalHubPage() {
             <li>
               <Card className="h-full">
                 <h2 className="text-lg font-bold tracking-tight">
-                  <Link href="/legal/privacy" className="hover:underline">
+                  <Link
+                    href="/legal/privacy"
+                    className="transition-colors hover:text-muted"
+                  >
                     Privacy Policy
                   </Link>
                 </h2>
@@ -41,7 +44,10 @@ export default function LegalHubPage() {
             <li>
               <Card className="h-full">
                 <h2 className="text-lg font-bold tracking-tight">
-                  <Link href="/legal/terms" className="hover:underline">
+                  <Link
+                    href="/legal/terms"
+                    className="transition-colors hover:text-muted"
+                  >
                     Terms / Disclaimers
                   </Link>
                 </h2>

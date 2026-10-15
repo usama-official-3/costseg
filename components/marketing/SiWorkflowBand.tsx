@@ -71,11 +71,13 @@ function TechCopy({
           variant="secondary"
           size={compact ? "sm" : "md"}
           pill
-          className="border-white/55 bg-transparent text-white hover:border-white"
         >
           {ctaLabel}
           <ArrowRight
-            className={cn("shrink-0", compact ? "size-3.5" : "size-4")}
+            className={cn(
+              "shrink-0 transition-transform duration-300 ease-out group-hover:translate-x-0.5",
+              compact ? "size-3.5" : "size-4",
+            )}
             aria-hidden
           />
         </LinkButton>

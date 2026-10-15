@@ -47,7 +47,10 @@ function ServiceCard({
       </div>
       {/* 2-line title slot — keeps row titles aligned without empty bulk */}
       <h3 className="line-clamp-2 min-h-[2.5rem] text-[14px] font-bold leading-snug tracking-tight text-ink sm:text-[15px]">
-        <Link href={item.href} className="hover:underline">
+        <Link
+          href={item.href}
+          className="transition-colors hover:text-muted"
+        >
           {item.title}
         </Link>
       </h3>
@@ -58,10 +61,13 @@ function ServiceCard({
       {showLearnMore ? (
         <Link
           href={item.href}
-          className="mt-auto inline-flex shrink-0 items-center gap-1.5 pt-3 text-sm font-bold text-ink transition hover:gap-2 lg:hidden"
+          className="group mt-auto inline-flex shrink-0 items-center gap-1.5 pt-3 text-sm font-bold text-ink transition-[color,gap] duration-300 ease-out hover:gap-2.5 hover:text-muted lg:hidden"
         >
           Learn more
-          <ArrowRight className="size-3.5" aria-hidden />
+          <ArrowRight
+            className="size-3.5 transition-transform duration-300 ease-out group-hover:translate-x-0.5"
+            aria-hidden
+          />
         </Link>
       ) : null}
     </article>
@@ -133,7 +139,10 @@ export function ServicesGrid({
             <div className="mt-8">
               <LinkButton href="/services" size="lg" pill>
                 Explore Our Services
-                <ArrowRight className="size-4" aria-hidden />
+                <ArrowRight
+                  className="size-4 transition-transform duration-300 ease-out group-hover:translate-x-0.5"
+                  aria-hidden
+                />
               </LinkButton>
             </div>
           </div>

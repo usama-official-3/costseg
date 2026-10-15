@@ -1,5 +1,15 @@
 import Link from "next/link";
-import { ArrowUpRight } from "lucide-react";
+import {
+  ArrowUpRight,
+  BookOpen,
+  Building2,
+  FileStack,
+  Gavel,
+  Layers,
+  Library,
+  Scale,
+  type LucideIcon,
+} from "lucide-react";
 import { KnowledgeSearchPanel } from "@/components/knowledge/KnowledgeSearchPanel";
 import { CtaBand } from "@/components/marketing/CtaBand";
 import { Hero } from "@/components/marketing/Hero";
@@ -11,7 +21,19 @@ import {
   getArticlesByGroup,
   listGroups,
 } from "@/lib/content/knowledge";
+import type { KnowledgeGroup } from "@/lib/schemas/knowledge";
 import { buildPageMetadata } from "@/lib/seo/pageMetadata";
+import { cn } from "@/lib/cn";
+
+const groupIcons: Record<KnowledgeGroup, LucideIcon> = {
+  fundamentals: BookOpen,
+  "tax-law": Scale,
+  cases: Gavel,
+  properties: Building2,
+  assets: Layers,
+  studies: FileStack,
+  resources: Library,
+};
 
 export const metadata = buildPageMetadata({
   title: "Knowledge Hub",
@@ -47,30 +69,56 @@ export default function KnowledgeHubPage() {
               groups. Client-approved for production indexing.
             </p>
           </div>
-          <ul className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          <ul className="grid gap-3.5 sm:grid-cols-2 sm:gap-4 lg:grid-cols-3">
             {groups.map((group) => {
               const count = getArticlesByGroup(group.group).length;
+              const Icon = groupIcons[group.group];
               return (
                 <li key={group.group}>
                   <Link
                     href={group.href}
-                    className="group flex h-full flex-col rounded-[13px] border border-line bg-paper p-5 transition-colors hover:border-ink/25 hover:bg-soft"
+                    className={cn(
+                      "group relative flex h-full flex-col overflow-hidden rounded-[13px]",
+                      "border border-line bg-paper p-5 sm:p-6",
+                      "shadow-[0_1px_0_rgba(23,25,27,0.04)]",
+                      "transition-[border-color,box-shadow,transform,background-color] duration-300 ease-out",
+                      "hover:-translate-y-0.5 hover:border-ink/15 hover:bg-soft",
+                      "hover:shadow-[0_12px_28px_rgba(23,25,27,0.08)]",
+                      "focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-lime",
+                    )}
                   >
-                    <div className="flex items-start justify-between gap-3">
-                      <h3 className="font-bold tracking-tight text-ink group-hover:underline">
-                        {group.label}
-                      </h3>
-                      <ArrowUpRight
-                        className="size-4 shrink-0 text-muted transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
-                        aria-hidden
-                      />
+                    <div
+                      aria-hidden
+                      className="pointer-events-none absolute -right-8 -top-10 size-28 rounded-full bg-[radial-gradient(circle,rgba(214,255,67,0.16)_0%,transparent_70%)] opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+                    />
+
+                    <div className="relative flex items-start justify-between gap-3">
+                      <div className="grid size-11 place-items-center rounded-[9px] bg-[#f0f4df] shadow-[0_0_0_3px_rgba(238,246,200,0.45)] transition-[background-color,box-shadow] duration-300 group-hover:bg-lime group-hover:shadow-[0_0_0_3px_rgba(214,255,67,0.28)]">
+                        <Icon
+                          className="size-5 text-ink"
+                          strokeWidth={1.75}
+                          aria-hidden
+                        />
+                      </div>
+                      <span className="inline-flex size-8 items-center justify-center rounded-full border border-line bg-paper text-muted transition-[border-color,background-color,color,transform] duration-300 group-hover:border-ink/20 group-hover:bg-ink group-hover:text-lime group-hover:translate-x-0.5 group-hover:-translate-y-0.5">
+                        <ArrowUpRight className="size-3.5" aria-hidden />
+                      </span>
                     </div>
-                    <p className="mt-2 flex-1 text-sm text-muted">
+
+                    <h3 className="relative mt-5 text-lg font-bold tracking-tight text-ink">
+                      {group.label}
+                    </h3>
+                    <p className="relative mt-2 flex-1 text-sm leading-relaxed text-muted">
                       {group.description}
                     </p>
-                    <p className="mt-4 text-xs font-extrabold uppercase tracking-[0.1em] text-ink">
-                      {count} pages
-                    </p>
+                    <div className="relative mt-5 flex items-center justify-between gap-3 border-t border-line pt-4">
+                      <span className="inline-flex items-center rounded-full bg-soft px-2.5 py-1 text-[11px] font-extrabold uppercase tracking-[0.12em] text-ink transition-colors duration-300 group-hover:bg-[#f0f4df]">
+                        {count} pages
+                      </span>
+                      <span className="text-xs font-semibold text-muted transition-colors duration-300 group-hover:text-ink">
+                        Browse
+                      </span>
+                    </div>
                   </Link>
                 </li>
               );
